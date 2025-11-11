@@ -1,6 +1,6 @@
 # NoTraffic
 
-A full-stack application with Vite frontend and Node.js backend.
+A full-stack application with Vite frontend and Node.js backend for polygon management.
 
 ## Project Structure
 
@@ -8,15 +8,18 @@ A full-stack application with Vite frontend and Node.js backend.
 NoTraffic/
 ├── frontend/       # React + TypeScript + Vite frontend
 │   └── src/
-│       └── features/    # Feature-based structure
-│           └── hello/
-│               └── pages/
+│       ├── features/    # Feature-based structure
+│       │   ├── polygon/
+│       │   └── session/
+│       ├── shared/      # Shared components
+│       └── api/         # API client
 └── backend/        # Node.js + TypeScript backend
     └── src/
         └── services/    # Services-based structure
             ├── logger/
             ├── database/
-            └── root/
+            ├── polygon/
+            └── session/
 ```
 
 ## Tech Stack
@@ -28,13 +31,14 @@ NoTraffic/
 - Styled Components
 - React Query
 - React Router
+- React Konva (Canvas)
 
 ### Backend
 - Node.js
 - TypeScript
 - Express
 - Winston (Logger)
-- SQLite (better-sqlite3)
+- Prisma + SQLite
 
 ## Getting Started
 
@@ -49,6 +53,14 @@ Or install individually:
 npm install
 cd frontend && npm install
 cd ../backend && npm install
+```
+
+### Database Setup
+
+```bash
+cd backend
+npm run prisma:generate
+npm run prisma:migrate
 ```
 
 ### Development
@@ -99,4 +111,3 @@ Ports can be customized using environment variables:
 - `FRONTEND_PORT` - Frontend port for CORS (default: 3000)
 
 The frontend automatically proxies `/api` requests to the backend server.
-
