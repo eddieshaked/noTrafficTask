@@ -1,0 +1,21 @@
+node_modules
+dist
+*.log
+.env
+.env.local
+
+# Database files
+backend/prisma/data/*.db
+backend/prisma/data/*.db-journal
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+

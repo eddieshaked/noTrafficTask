@@ -1,0 +1,8 @@
+-- CreateTable
+CREATE TABLE "polygons" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "name" TEXT NOT NULL,
+    "points" TEXT NOT NULL,
+    "userId" TEXT NOT NULL,
+    "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

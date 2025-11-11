@@ -1,0 +1,21 @@
+node_modules
+dist
+*.log
+data/*.sqlite
+data/*.sqlite-journal
+data/*.db
+data/*.db-journal
+.env
+.env.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
